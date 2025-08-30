@@ -7,11 +7,11 @@ import Link from 'next/link'
 
 
 const ProductCrad = ({product}:{product:ProductType}) => {
-  return (
+  return ( 
     <div className='shadow-lg rounded-lg overflow-hidden'>
        <Link href={`/products/${product.id}`}>
         <div className="relative aspect-[2/3]">
-          <Image src={product.images[product.colors[0]]} alt={product.name} fill className="object-cover hover:scale-105 transition-all duration-300" />
+          <Image src={product.images[product.colors[0]]} alt={product.name} fill className=" object-cover hover:scale-105 transition-all duration-300" />
         </div>
       </Link>
 
@@ -23,13 +23,13 @@ const ProductCrad = ({product}:{product:ProductType}) => {
       <div className='flex items-center gap-4 text-xs'>
        
         <div className='flex flex-col gap-1'>
-          <span className="text-gray-500">Size</span>
+          <span className="text-gray-500 m-2">Size</span>
           <select
               name="size"
               id="size"
-              className="ring ring-gray-300 rounded-md px-2 py-1"
+              className="ring ring-gray-300 rounded-md px-5 py-1 m-3"
               onChange={(e) =>
-                handleProductType({ type: "size", value: e.target.value })
+               handleProductType({ type: "size", value: e.target.value })
               }
             >
               {product.sizes.map((size) => (
@@ -48,7 +48,6 @@ const ProductCrad = ({product}:{product:ProductType}) => {
           </div>
         </div>
       </div>
-
       <div className='flex items-center justify-between p-4 border-t border-gray-200'>
         <p className="font-medium">${product.price.toFixed(2)}</p>
       </div>
