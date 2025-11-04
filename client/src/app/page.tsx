@@ -1,7 +1,7 @@
 import ProductList from "@/components/ProductList";
 import Image from "next/image";
 
-const Homep = () => {
+const Homepage = () => {
   return (
     <div className="">
       <div className="relative aspect-[3/1] mb-12">
